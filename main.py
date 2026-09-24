@@ -59,7 +59,8 @@ pavardes = [
     "Mockus", "Ivanauskaitė", "Dambrauskas", "Milašiūtė",
     "Kvedaras", "Žilinskaitė", "Norkus", "Mačiulytė",
     "Sakalauskas", "Brazaitis", "Vaičiulis", "Daugėla",
-    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė"
+    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė", "Jonaitis",
+    "Andriekus", "Kazlauskaitė", "Rimkienė", "Viliūkas", "Romutis", "Liaugaudienė", "Rimiškis"
 ]
 
 amzius = [
@@ -118,6 +119,7 @@ klientu_miestai = [
     "Marijampolė", "Vilnius", "Kaunas", "Telšiai", "Alytus",
     "Klaipėda", "Šiauliai", "Kaunas", "Panevėžys", "Vilnius",
     "Kaunas", "Marijampolė", "Klaipėda", "Utena", "Kaunas",
+    "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys", 
     "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys"
 ]
 
@@ -148,91 +150,171 @@ balansai = [
     420.60, 9340.40, 2860.25, 6750.70, 1280.00
 ]
 
+
 # ============================================================
 # FUNKCIJOS
 # ============================================================
 
 def rasti_klienta(ieskomo_kliento_id):
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
 
-    pass
+    for i in range(len(klientu_id)):
+
+        if klientu_id[i] == ieskomo_kliento_id:
+            print("Klientas:")
+            print("ID:", klientu_id[i])
+            print("Vardas:", vardai[i])
+            print("Pavardė:", pavardes[i])
+            print("Balansas:", balansai[i], "€")
+            return
+
+    print("Klientas nerastas.")
+
 
 def gauti_balansa(kliento_id):
-    global klientu_id
-    global balansai
 
-    pass
+    for i in range(len(klientu_id)):
+
+        if klientu_id[i] == kliento_id:
+            return balansai[i]
+
+    return None
+
 
 def gauti_turtingiausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
 
-    pass
+    didziausias_balansas = balansai[0]
+    didziausio_indeksas = 0
+
+    for i in range(1, len(balansai)):
+
+        if balansai[i] > didziausias_balansas:
+            didziausias_balansas = balansai[i]
+            didziausio_indeksas = i
+
+    print("Turtingiausias klientas:")
+    print(vardai[didziausio_indeksas], pavardes[didziausio_indeksas])
+    print("ID:", klientu_id[didziausio_indeksas])
+    print("Balansas:", didziausias_balansas, "€")
+
 
 def gauti_maziausiai_pinigu_turinti_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
 
-    pass
+    maziausias_balansas = balansai[0]
+    maziausio_indeksas = 0
+
+    for i in range(1, len(balansai)):
+
+        if balansai[i] < maziausias_balansas:
+            maziausias_balansas = balansai[i]
+            maziausio_indeksas = i
+
+    print("Mažiausiai pinigų turintis klientas:")
+    print(vardai[maziausio_indeksas], pavardes[maziausio_indeksas])
+    print("ID:", klientu_id[maziausio_indeksas])
+    print("Balansas:", maziausias_balansas, "€")
+
 
 def gauti_bendra_banko_suma():
-    global balansai
 
-    pass
+    bendra_suma = 0
+
+    for balansas in balansai:
+        bendra_suma += balansas
+
+    return round(bendra_suma, 2)
+
 
 def gauti_vidutini_balansa():
-    global balansai
 
-    pass
+    bendra_suma = gauti_bendra_banko_suma()
+
+    return round(bendra_suma / len(balansai), 2)
+
 
 def gauti_vyriausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
 
-    pass
+    didziausias_amzius = amzius[0]
+    vyriausio_indeksas = 0
+
+    for i in range(1, len(amzius)):
+
+        if amzius[i] > didziausias_amzius:
+            didziausias_amzius = amzius[i]
+            vyriausio_indeksas = i
+
+    print("Vyriausias klientas:")
+    print(vardai[vyriausio_indeksas], pavardes[vyriausio_indeksas])
+    print("ID:", klientu_id[vyriausio_indeksas])
+    print("Amžius:", didziausias_amzius)
+
 
 def gauti_jauniausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
-    
-    pass
+
+    maziausias_amzius = amzius[0]
+    jauniausio_indeksas = 0
+
+    for i in range(1, len(amzius)):
+
+        if amzius[i] < maziausias_amzius:
+            maziausias_amzius = amzius[i]
+            jauniausio_indeksas = i
+
+    print("Jauniausias klientas:")
+    print(vardai[jauniausio_indeksas], pavardes[jauniausio_indeksas])
+    print("ID:", klientu_id[jauniausio_indeksas])
+    print("Amžius:", maziausias_amzius)
+
 
 def atrinkti_turtingus_klientus():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
 
-    pass
+    print("Klientai, kurių balansas didesnis nei 5000 €:")
 
-def atrinkti_klientus_pagal_miesta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global klientu_miestai
+    for i in range(len(balansai)):
 
-    pass
+        if balansai[i] > 5000:
+            print(
+                klientu_id[i],
+                vardai[i],
+                pavardes[i],
+                "-",
+                balansai[i],
+                "€"
+            )
+
+
+def atrinkti_klientus_pagal_miesta(ieskomas_miestas):
+    rasta = False
+
+    for i in range(len(klientu_miestai)):
+
+        if klientu_miestai[i] == ieskomas_miestas:
+            print(
+                klientu_id[i],
+                vardai[i],
+                pavardes[i]
+            )
+            rasta = True
+
+    if not rasta:
+        print("Šiame mieste klientų nerasta.")
+
 
 def gauti_klientus_su_dideliu_balansu():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
 
-    #Didelis balansas = balansas > 10000
+    print("Klientai, kurių balansas didesnis nei 10000 €:")
 
-    pass
+    for i in range(len(balansai)):
+
+        if balansai[i] > 10000:
+            print(
+                klientu_id[i],
+                vardai[i],
+                pavardes[i],
+                "-",
+                balansai[i],
+                "€"
+            )
+
 
 def sukurti_nauja_banko_saskaita(
     vardas,
@@ -241,18 +323,75 @@ def sukurti_nauja_banko_saskaita(
     kliento_miestas,
     pradinis_indelis
 ):
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
-    global klientu_miestai
-    global balansai
 
-    pass
+    naujas_id = klientu_id[-1] + 1
+
+    klientu_id.append(naujas_id)
+    vardai.append(vardas)
+    pavardes.append(pavarde)
+    amzius.append(kliento_amzius)
+    klientu_miestai.append(kliento_miestas)
+    balansai.append(pradinis_indelis)
+
+    print("Nauja sąskaita sukurta!")
+    print("Kliento ID:", naujas_id)
+    print("Klientas:", vardas, pavarde)
+    print("Balansas:", pradinis_indelis, "€")
+
 
 # ============================================================
 # PAGRINDINIS KODAS
 # ============================================================
+print("1. Rasti klientą")
+rasti_klienta(1005)
 
-#Funkcijas paleidžiame šioje vietoje
+print()
+print("2. Gauti kliento balansą")
+balansas = gauti_balansa(1005)
+print("Kliento balansas:", balansas, "€")
 
+print()
+print("3. Turtingiausias klientas")
+gauti_turtingiausia_klienta()
+
+print()
+print("4. Mažiausiai pinigų turintis klientas")
+gauti_maziausiai_pinigu_turinti_klienta()
+
+print()
+print("5. Bendra banko suma")
+print(gauti_bendra_banko_suma(), "€")
+
+print()
+print("6. Vidutinis balansas")
+print(gauti_vidutini_balansa(), "€")
+
+print()
+print("7. Vyriausias klientas")
+gauti_vyriausia_klienta()
+
+print()
+print("8. Jauniausias klientas")
+gauti_jauniausia_klienta()
+
+print()
+print("9. Turtingi klientai")
+atrinkti_turtingus_klientus()
+
+print()
+print("10. Klientai pagal miestą")
+atrinkti_klientus_pagal_miesta("Kaunas")
+
+print()
+print("11. Klientai su dideliu balansu")
+gauti_klientus_su_dideliu_balansu()
+
+print()
+print("12. Naujos banko sąskaitos kūrimas")
+sukurti_nauja_banko_saskaita(
+    "Antanas",
+    "Antanaitis",
+    35,
+    "Kaunas",
+    2500.00
+)
