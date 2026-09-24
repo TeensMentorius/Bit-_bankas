@@ -153,85 +153,37 @@ balansai = [
 # ============================================================
 
 def rasti_klienta(ieskomo_kliento_id):
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
-
     pass
 
 def gauti_balansa(kliento_id):
-    global klientu_id
-    global balansai
-
     pass
 
 def gauti_turtingiausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
-
     pass
 
 def gauti_maziausiai_pinigu_turinti_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
-
     pass
 
 def gauti_bendra_banko_suma():
-    global balansai
-
     pass
 
 def gauti_vidutini_balansa():
-    global balansai
-
     pass
 
 def gauti_vyriausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
-
     pass
 
 def gauti_jauniausia_klienta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
-    
     pass
 
 def atrinkti_turtingus_klientus():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
-
     pass
 
 def atrinkti_klientus_pagal_miesta():
-    global klientu_id
-    global vardai
-    global pavardes
-    global klientu_miestai
-
     pass
 
 def gauti_klientus_su_dideliu_balansu():
-    global klientu_id
-    global vardai
-    global pavardes
-    global balansai
-
     #Didelis balansas = balansas > 10000
-
     pass
 
 def sukurti_nauja_banko_saskaita(
@@ -241,13 +193,6 @@ def sukurti_nauja_banko_saskaita(
     kliento_miestas,
     pradinis_indelis
 ):
-    global klientu_id
-    global vardai
-    global pavardes
-    global amzius
-    global klientu_miestai
-    global balansai
-
     pass
 
 # ============================================================
