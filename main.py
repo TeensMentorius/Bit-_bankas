@@ -179,8 +179,13 @@ def gauti_vyriausia_klienta():
 def gauti_jauniausia_klienta():
     pass
 
-def atrinkti_turtingus_klientus():
-    pass
+def atrinkti_turtingus_klientus(minimalus_balansas=10000):
+    """Grąžina klientų, kurių balansas viršija nurodytą ribą, ID sąrašą."""
+    return [
+        kliento_id
+        for kliento_id, balansas in zip(klientu_id, balansai)
+        if balansas > minimalus_balansas
+    ]
 
 def atrinkti_klientus_pagal_miesta():
     pass
