@@ -204,4 +204,3 @@ def sukurti_nauja_banko_saskaita(
 # ============================================================
 
 #Funkcijas paleidžiame šioje vietoje
-
