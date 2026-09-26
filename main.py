@@ -156,7 +156,14 @@ balansai = [
 # ============================================================
 
 def rasti_klienta(ieskomo_kliento_id):
-    pass
+    index = klientu_id.index(ieskomo_kliento_id)
+    vardas = vardai[index]
+    pavarde = pavardes[index]
+    kliento_amzius = amzius[index]
+    miestas = klientu_miestai[index]
+    balansas = balansai[index]
+
+    return vardas, pavarde, kliento_amzius, miestas, balansas
 
 def gauti_balansa(kliento_id):
     pass
