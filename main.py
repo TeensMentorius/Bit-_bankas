@@ -184,10 +184,6 @@ def atrinkti_klientus_pagal_miesta():
 
 def gauti_klientus_su_dideliu_balansu():
     #Didelis balansas = balansas > 10000
-    print("vardai:", len(vardai))
-    print("pavardes:", len(pavardes))
-    print("balansai:", len(balansai))
-    print("hello world")
     print("\n\nKlientai su dideliu balansu: \n")
     for i in range(len(pavardes)):
 
