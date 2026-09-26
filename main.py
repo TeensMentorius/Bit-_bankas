@@ -159,7 +159,19 @@ def gauti_balansa(kliento_id):
     pass
 
 def gauti_turtingiausia_klienta():
-    pass
+    # When i wrote this code, only god and i knew what it was.
+    # Now only god knows
+    # Please update this counter to reflect how many hours 
+    # you have wasted here and deter future programers
+    hours_spent = 12
+    
+    
+    
+    didziausias_pin_kiekis = max(balansai)
+    indexas = balansai.index(didziausias_pin_kiekis)
+    for_return = vardai[indexas]
+    for_return2 = pavardes[indexas]
+    return for_return,for_return2
 
 def gauti_maziausiai_pinigu_turinti_klienta():
     pass
@@ -200,4 +212,3 @@ def sukurti_nauja_banko_saskaita(
 # ============================================================
 
 #Funkcijas paleidžiame šioje vietoje
-
