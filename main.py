@@ -59,7 +59,9 @@ pavardes = [
     "Mockus", "Ivanauskaitė", "Dambrauskas", "Milašiūtė",
     "Kvedaras", "Žilinskaitė", "Norkus", "Mačiulytė",
     "Sakalauskas", "Brazaitis", "Vaičiulis", "Daugėla",
-    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė"
+    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė",
+    "Butkus", "Žukauskas", "Šukytė", "Jankauskas",
+    "Bubnytė", "Stonys", "Žukauskaitė", "Giedraitis"
 ]
 
 amzius = [
@@ -118,6 +120,7 @@ klientu_miestai = [
     "Marijampolė", "Vilnius", "Kaunas", "Telšiai", "Alytus",
     "Klaipėda", "Šiauliai", "Kaunas", "Panevėžys", "Vilnius",
     "Kaunas", "Marijampolė", "Klaipėda", "Utena", "Kaunas",
+    "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys",
     "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys"
 ]
 
