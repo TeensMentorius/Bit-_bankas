@@ -184,7 +184,10 @@ def gauti_vyriausia_klienta():
     pass
 
 def gauti_jauniausia_klienta():
-    pass
+    jauniausias = min(amzius)
+    jauniausias_vardas = vardai[amzius.index(jauniausias)]
+    jauniausias_pavarde = pavardes[amzius.index(jauniausias)]
+    return jauniausias, jauniausias_vardas, jauniausias_pavarde
 
 def atrinkti_turtingus_klientus():
     pass
@@ -211,3 +214,4 @@ def sukurti_nauja_banko_saskaita(
 
 #Funkcijas paleidžiame šioje vietoje
 
+print("Jauniausias klientas : ", gauti_jauniausia_klienta()) 
