@@ -209,7 +209,11 @@ def atrinkti_klientus_pagal_miesta():
 
 def gauti_klientus_su_dideliu_balansu():
     #Didelis balansas = balansas > 10000
-    pass
+    print("\n\nKlientai su dideliu balansu: \n")
+    for i in range(len(pavardes)):
+
+        if balansai[i] > 10000:
+            print(f"{vardai[i]} {pavardes[i]} {balansai[i]}")
 
 def sukurti_nauja_banko_saskaita(
     vardas,
