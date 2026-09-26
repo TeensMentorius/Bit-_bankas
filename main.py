@@ -204,4 +204,4 @@ def sukurti_nauja_banko_saskaita(
 
 #Funkcijas paleidžiame šioje vietoje
 
-print("Jauniausias klientas: ", gauti_jauniausia_klienta()) 
+print("Jauniausias klientas : ", gauti_jauniausia_klienta()) 
