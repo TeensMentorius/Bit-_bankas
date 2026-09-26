@@ -212,9 +212,4 @@ def sukurti_nauja_banko_saskaita(
 #Funkcijas paleidžiame šioje vietoje
 
 vyriausias = gauti_vyriausia_klienta()
-print(" Vyriausias banko klientas:")
-print(f"ID: {vyriausias['id']}")
-print(f"Vardas Pavardė: {vyriausias['vardas']} {vyriausias['pavarde']}")
 print(f"Amžius: {vyriausias['amzius']} metai")
-print(f"Miestas: {vyriausias['miestas']}")
-print(f"Sąskaitos balansas: {vyriausias['balansas']} EUR")
