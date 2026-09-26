@@ -59,7 +59,9 @@ pavardes = [
     "Mockus", "Ivanauskaitė", "Dambrauskas", "Milašiūtė",
     "Kvedaras", "Žilinskaitė", "Norkus", "Mačiulytė",
     "Sakalauskas", "Brazaitis", "Vaičiulis", "Daugėla",
-    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė"
+    "Stonaitis", "Giedraitė", "Kriščiūnas", "Vaitkutė",
+    "Butkus", "Žukauskas", "Šukytė", "Jankauskas",
+    "Bubnytė", "Stonys", "Žukauskaitė", "Giedraitis"
 ]
 
 amzius = [
@@ -118,6 +120,7 @@ klientu_miestai = [
     "Marijampolė", "Vilnius", "Kaunas", "Telšiai", "Alytus",
     "Klaipėda", "Šiauliai", "Kaunas", "Panevėžys", "Vilnius",
     "Kaunas", "Marijampolė", "Klaipėda", "Utena", "Kaunas",
+    "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys",
     "Vilnius", "Šiauliai", "Alytus", "Kaunas", "Panevėžys"
 ]
 
@@ -153,16 +156,31 @@ balansai = [
 # ============================================================
 
 def rasti_klienta(ieskomo_kliento_id):
-    pass
+    index = klientu_id.index(ieskomo_kliento_id)
+    vardas = vardai[index]
+    pavarde = pavardes[index]
+    kliento_amzius = amzius[index]
+    miestas = klientu_miestai[index]
+    balansas = balansai[index]
+
+    return vardas, pavarde, kliento_amzius, miestas, balansas
 
 def gauti_balansa(kliento_id):
-    pass
+    for i in range(len(klientu_id)):
+
+        if klientu_id[i] == kliento_id:
+            return balansai[i]
+
+    return None
 
 def gauti_turtingiausia_klienta():
     pass
 
 def gauti_maziausiai_pinigu_turinti_klienta():
-    pass
+    maziausias = min(balansai)
+    index = balansai.index(maziausias)
+    id_numeris = klientu_id[index]
+    return rasti_klienta(id_numeris)
 
 def gauti_bendra_banko_suma():
     pass
@@ -178,8 +196,13 @@ def gauti_vyriausia_klienta():
 def gauti_jauniausia_klienta():
     pass
 
-def atrinkti_turtingus_klientus():
-    pass
+def atrinkti_turtingus_klientus(minimalus_balansas=10000):
+    """Grąžina klientų, kurių balansas viršija nurodytą ribą, ID sąrašą."""
+    return [
+        kliento_id
+        for kliento_id, balansas in zip(klientu_id, balansai)
+        if balansas > minimalus_balansas
+    ]
 
 def atrinkti_klientus_pagal_miesta():
     pass
@@ -207,3 +230,4 @@ def sukurti_nauja_banko_saskaita(
 gauti_vidutini_balansa()
 
 print(len(pavardes))
+print(gauti_maziausiai_pinigu_turinti_klienta())
