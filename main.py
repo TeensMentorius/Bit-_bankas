@@ -171,7 +171,17 @@ def gauti_vidutini_balansa():
     pass
 
 def gauti_vyriausia_klienta():
-    pass
+    max_amzius = max(amzius)
+    idx = amzius.index(max_amzius)
+    return {
+        "id": klientu_id[idx],
+        "vardas": vardai[idx],
+        "pavarde": pavardes[idx],
+        "amzius": amzius[idx],
+        "miestas": klientu_miestai[idx],
+        "balansas": balansai[idx]
+    }
+    
 
 def gauti_jauniausia_klienta():
     pass
@@ -201,3 +211,10 @@ def sukurti_nauja_banko_saskaita(
 
 #Funkcijas paleidžiame šioje vietoje
 
+vyriausias = gauti_vyriausia_klienta()
+print(" Vyriausias banko klientas:")
+print(f"ID: {vyriausias['id']}")
+print(f"Vardas Pavardė: {vyriausias['vardas']} {vyriausias['pavarde']}")
+print(f"Amžius: {vyriausias['amzius']} metai")
+print(f"Miestas: {vyriausias['miestas']}")
+print(f"Sąskaitos balansas: {vyriausias['balansas']} EUR")
