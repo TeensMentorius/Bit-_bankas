@@ -156,7 +156,13 @@ def rasti_klienta(ieskomo_kliento_id):
     pass
 
 def gauti_balansa(kliento_id):
-    pass
+    
+    for i in range(len(klientu_id)):
+
+        if klientu_id[i] == kliento_id:
+            return balansai[i]
+
+    return None
 
 def gauti_turtingiausia_klienta():
     pass
