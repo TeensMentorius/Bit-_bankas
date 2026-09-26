@@ -186,8 +186,10 @@ def gauti_bendra_banko_suma():
     pass
 
 def gauti_vidutini_balansa():
-    pass
-
+    vidutinis_balansas = round(sum(balansai)/len(balansai),2)
+    print(vidutinis_balansas)
+    return(vidutinis_balansas)
+    
 def gauti_vyriausia_klienta():
     pass
 
@@ -224,4 +226,8 @@ def sukurti_nauja_banko_saskaita(
 
 #Funkcijas paleidžiame šioje vietoje
 
+
+gauti_vidutini_balansa()
+
+print(len(pavardes))
 print(gauti_maziausiai_pinigu_turinti_klienta())
