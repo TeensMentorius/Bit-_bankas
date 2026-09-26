@@ -172,7 +172,10 @@ def gauti_turtingiausia_klienta():
     pass
 
 def gauti_maziausiai_pinigu_turinti_klienta():
-    pass
+    maziausias = min(balansai)
+    index = balansai.index(maziausias)
+    id_numeris = klientu_id[index]
+    return rasti_klienta(id_numeris)
 
 def gauti_bendra_banko_suma():
     pass
@@ -216,3 +219,4 @@ def sukurti_nauja_banko_saskaita(
 
 #Funkcijas paleidžiame šioje vietoje
 
+print(gauti_maziausiai_pinigu_turinti_klienta())
