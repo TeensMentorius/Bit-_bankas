@@ -179,8 +179,12 @@ def gauti_jauniausia_klienta():
 def atrinkti_turtingus_klientus():
     pass
 
-def atrinkti_klientus_pagal_miesta():
-    pass
+def atrinkti_klientus_pagal_miesta(miestas):
+    for i in range(len(klientu_miestai)):
+        if klientu_miestai[i] == miestas:
+            print(klientu_id[i],
+                  vardai[i],
+                  pavardes[i])
 
 def gauti_klientus_su_dideliu_balansu():
     #Didelis balansas = balansas > 10000
