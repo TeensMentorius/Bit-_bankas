@@ -142,6 +142,13 @@ balansai = [
     680.50, 9750.40, 1860.75, 6340.20, 5200.00,
     145.30, 11200.65, 2980.40, 760.00, 8950.20,
     4130.50, 570.25, 13400.75, 2450.00, 7100.30,
+   pass
+
+def gauti_turtingiausia_klienta():
+    pass
+
+def gauti_maziausiai_pinigu_turinti_klienta():
+    pass
     920.60, 10560.40, 1780.25, 4890.70, 15200.00,
     360.50, 8260.40, 2940.75, 6500.20, 1080.00,
     13800.50, 4320.30, 790.65, 9560.40, 2670.00,
@@ -166,22 +173,8 @@ def rasti_klienta(ieskomo_kliento_id):
     return vardas, pavarde, kliento_amzius, miestas, balansas
 
 def gauti_balansa(kliento_id):
-    for i in range(len(klientu_id)):
-
-        if klientu_id[i] == kliento_id:
-            return balansai[i]
-
-    return None
-
-def gauti_turtingiausia_klienta():
     pass
-
-def gauti_maziausiai_pinigu_turinti_klienta():
-    maziausias = min(balansai)
-    index = balansai.index(maziausias)
-    id_numeris = klientu_id[index]
-    return rasti_klienta(id_numeris)
-
+  
 def gauti_bendra_banko_suma():
     pass
 
@@ -215,20 +208,24 @@ def gauti_klientus_su_dideliu_balansu():
         if balansai[i] > 10000:
             print(f"{vardai[i]} {pavardes[i]} {balansai[i]}")
 
-def sukurti_nauja_banko_saskaita(
-    vardas,
-    pavarde,
-    kliento_amzius,
-    kliento_miestas,
-    pradinis_indelis
-):
-    pass
+def sukurti_nauja_banko_saskaita():    
+    vardas = input("Įveskite savo vardą: ")
+    vardai.append(vardas)
+    pavarde = input("Įveskite savo pavardę: ")
+    pavardes.append(pavarde)
+    amzius = input("Įveskite savo amžių: ")
+    amzius.append(int(amzius))
+    ivestas_miestas = input("Įveskite savo miestą: ")
+    klientu_miestai.append(ivestas_miestas)
+    indelis = input("Įveskite pradinį indėlį:")
+    balansai.append(float(indelis))
 
 # ============================================================
 # PAGRINDINIS KODAS
 # ============================================================
 
 #Funkcijas paleidžiame šioje vietoje
+sukurti_nauja_banko_saskaita()
 
 
 gauti_vidutini_balansa()
