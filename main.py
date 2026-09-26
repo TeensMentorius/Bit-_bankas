@@ -156,7 +156,6 @@ def rasti_klienta(ieskomo_kliento_id):
     pass
 
 def gauti_balansa(kliento_id):
-    
     for i in range(len(klientu_id)):
 
         if klientu_id[i] == kliento_id:
