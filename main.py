@@ -175,7 +175,12 @@ def gauti_maziausiai_pinigu_turinti_klienta():
     pass
 
 def gauti_bendra_banko_suma():
-    pass
+    bendra_suma = 0 
+
+    for balansas in balansai: 
+        bendra_suma += balansas 
+
+    return round(bendra_suma, 1)
 
 def gauti_vidutini_balansa():
     pass
